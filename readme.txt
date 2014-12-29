@@ -3,7 +3,7 @@ VUETRIS
 
 AUTHORS
 	Chad Cashman II
-		chadc.me
+		http://chadc.me
 		
 
 LIBRARY INFORMATION
