@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vuetris | Tetris on VueJS</title>
+    <meta name="title" content="Vuetris">
+    <meta name="keywords" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../css/vuetris.css">
+  </head>
+  <body>
+    <h1 class="text-center">Vuetris</h1>
+    <div id="vuetris">
+      <script id="vuetris-template" type="text/x-template">
+        <rect v-repeat="Block" rx="3" ry="3" class="{{className}}" v-attr="x:x,y:y,width:width,height:height"></rect>
+        <rect v-repeat="Blocks" rx="3" ry="3" class="{{className}}" v-attr="x:x,y:y,width:width,height:height"></rect>
+      </script>
+      <svg id="vuetris-svg" width="250" height="400">
+        <rect x="0" y="0" rx="20" ry="20" width="250" height="400" class="vuetris-bg"></rect>
+        <g v-component="vuetris" v-with="Blocks:Blocks"></g>
+        <g v-component="vuetris" v-with="Blocks:Block"></g>
+      </svg>
+      <p v-repeat="Text" class="text-center {{className}}"> {{text}}</p>
+      <p class="text-center">
+        <button id="vuetris-left" v-on="click:shapeLeft">Left</button>
+        <button v-on="click:shapeRotate">Rotate</button>
+        <button id="vuetris-right" v-on="click:shapeRight">Right</button><br><br>
+        <button id="vuetris-down" v-on="click:dropBlocks">Down</button><br><br>
+        <button v-on="click:start">Start</button>
+        <button v-on="click:pause">Pause</button>
+        <button v-on="click:reset">Reset</button>
+      </p>
+    </div>
+    <script src="../js/zepto.min.js"></script>
+    <script src="../js/vue.min.js"></script>
+    <script src="../js/vuetris.min.js"></script>
+  </body>
+</html>

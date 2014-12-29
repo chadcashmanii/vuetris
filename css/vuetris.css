@@ -1,0 +1,37 @@
+.text-center {
+    text-align: center;
+    vertical-align: middle;
+}
+
+svg#vuetris-svg {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+rect.vuetris-bg {
+    fill: #dcdcdc;
+    opacity: 0.8;
+    stroke-width: 4px;
+    stroke: #aeaeae;
+}
+
+rect.vuetris-block {
+    opacity: 0.9;
+}
+
+rect.vuetris-block.block {
+    fill: #000;
+}
+
+rect.vuetris-block.line {
+    fill: #4d8a00;
+}
+
+rect.vuetris-block.slant {
+    fill: #a10496;
+}
+
+rect.vuetris-block.l {
+    fill: #00767a;
+}
